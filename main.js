@@ -1,6 +1,7 @@
 var button = document.getElementsByTagName('button')[0];
 
-var yourFortune = document.querySelector('#fortune-wrapper p span');
+var yourFortune = document.querySelector('fortune-wrapper p span');
+//fortuneWrapper.appendChild(yourFortune);
 
 var fortuneTextPlaceholder = document.createTextNode('');
 yourFortune.appendChild(fortuneTextPlaceholder);
@@ -16,6 +17,10 @@ var shakeBall = function() {
 	//Print the first list item to yourFortune variable
 	var fortuneText = document.createTextNode(magicFortunes[0]);
 	yourFortune.appendChild(fortuneText);
+
+	//Hide generator button
+	var ourButtonSection = document.getElementById('generator-button');
+	ourButtonSection.removeChild(button);
 
 };
 
