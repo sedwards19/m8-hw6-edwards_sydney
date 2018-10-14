@@ -10,8 +10,14 @@ var magicFortunes = ['It is certain.','It is decidedly so.', 'Without a doubt.',
 
 //Make the function
 var shakeBall = function() {
+
 	magicFortunes.sort(function(a, b){return 0.5 - Math.random()});
-}
+
+	//Print the first list item to yourFortune variable
+	var fortuneText = document.createTextNode(magicFortunes[0]);
+	yourFortune.appendChild(fortuneText);
+
+};
 
 //Event Handler Property
 button.onclick = shakeBall;
