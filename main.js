@@ -1,6 +1,6 @@
 var button = document.getElementsByTagName('button')[0];
 
-var yourFortune = document.querySelector('fortune-wrapper p span');
+var yourFortune = document.querySelector('#fortune-wrapper p span');
 //fortuneWrapper.appendChild(yourFortune);
 
 var fortuneTextPlaceholder = document.createTextNode('');
@@ -21,6 +21,9 @@ var shakeBall = function() {
 	//Hide generator button
 	var ourButtonSection = document.getElementById('generator-button');
 	ourButtonSection.removeChild(button);
+
+	//Add class to printed Fortune
+	yourFortune.classList.add('fortune-show');
 
 };
 
